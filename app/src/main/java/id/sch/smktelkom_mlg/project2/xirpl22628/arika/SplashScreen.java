@@ -2,7 +2,10 @@ package id.sch.smktelkom_mlg.project2.xirpl22628.arika;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Log;
 
 /**
  * Created by Mokleters on 3/23/2017.
@@ -10,8 +13,15 @@ import android.os.Bundle;
 
 public class SplashScreen extends Activity{
 
+    private static final String TAG = "LivecycleTag";
+    MediaPlayer mediaPlayer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate: ");
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.arika);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
 
@@ -31,8 +41,31 @@ public class SplashScreen extends Activity{
     }
 
     @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d(TAG, "onStart: ");
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.d(TAG, "onResume:");
+        mediaPlayer.start();
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
+        Log.d(TAG, "onPause: ");
+        mediaPlayer.pause();
         finish();
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.d(TAG, "onDestroy:");
+        if (mediaPlayer != null)
+            mediaPlayer.release();
     }
 }
