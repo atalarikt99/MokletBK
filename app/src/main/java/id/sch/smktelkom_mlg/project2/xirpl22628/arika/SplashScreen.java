@@ -6,6 +6,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 
 /**
  * Created by Mokleters on 3/23/2017.
@@ -22,8 +24,11 @@ public class SplashScreen extends Activity{
 
         mediaPlayer = MediaPlayer.create(this, R.raw.arika);
 
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash);
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.setContentView(R.layout.splash);
 
         Thread timerThread = new Thread(){
             public void run(){
