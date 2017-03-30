@@ -3,6 +3,7 @@ package id.sch.smktelkom_mlg.project2.xirpl22628.arika;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -80,6 +81,14 @@ public class MenuActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        changePage(id);
+
+        return true;
+    }
+
+    private void changePage(int id){
+        Fragment fragment = null;
+
         if (id == R.id.nav_home) {
             // Handle the camera action
         } else if (id == R.id.nav_search) {
@@ -90,8 +99,9 @@ public class MenuActivity extends AppCompatActivity
 
         }
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,fragment).commitNow();
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 }

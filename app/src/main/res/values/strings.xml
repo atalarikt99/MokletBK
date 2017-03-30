@@ -35,4 +35,7 @@
     <string name="btn_sign_out">Keluar</string>
     <string name="lbl_forgot_password">Lupa password?</string>
     <string name="forgot_password_msg">Kami hanya membutuhkan email anda yang telah terdaftar untuk mengirim instruksi pengubahan password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
