@@ -1,13 +1,17 @@
 <resources>
     <string name="app_name">Arika</string>
-    <string name="title_activity_main2">Menu Arika</string>
+    <string name="title_activity_main">Menu Arika</string>
 
     <string name="navigation_drawer_open">Buka navigasi</string>
     <string name="navigation_drawer_close">Tutup navigasi</string>
 
     <string name="action_settings">Pengaturan</string>
     <string name="title_activity_login">Masuk</string>
+    <string name="action_save">Simpan Data</string>
 
+    <string name="name">Nama</string>
+    <string name="age">Usia</string>
+    <string name="change_profile">Ubah profil</string>
     <string name="action_sign_in_short">Masuk</string>
     <string name="email">Email</string>
     <string name="minimum_password">Password terlalu pendek, minimal 6 karakter</string>
@@ -24,7 +28,7 @@
     <string name="btn_login">MASUK</string>
     <string name="btn_link_to_register">Bukan anggota? Daftarlah jadi anggota sekarang juga!</string>
     <string name="btn_link_to_login">Sudah terdaftar, silahkan masuk</string>
-    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="title_activity_reset_password">Reset Password</string>
     <string name="btn_forgot_password">Lupa password?</string>
     <string name="btn_reset_password">Reset Password</string>
     <string name="btn_back"><![CDATA[<< Kembali]]></string>
