@@ -76,17 +76,6 @@
             android:singleLine="true" />
 
         <Button
-            android:id="@+id/jobVacancy"
-            android:background="@color/colorPrimary"
-            android:textColor="@color/white"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/job_vacancy"
-            android:textStyle="bold" />
-
-        <Button
             android:id="@+id/editProfile"
             style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
