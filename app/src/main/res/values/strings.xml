@@ -8,10 +8,10 @@
     <string name="start">SIAP!</string>
 
     <string name="slide_1_title">Selamat datang di MokletBK!</string>
-    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+    <string name="slide_1_desc">MokletBK adalah aplikasi yang dirancang untuk bimbingan konseling SMK Telkom Malang.</string>
 
-    <string name="slide_2_title">Movie Tickets</string>
-    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+    <string name="slide_2_title">Laporkan Masalah Pribadi Anda</string>
+    <string name="slide_2_desc">Ingin curhat dengan guru BK? Punya pertanyaan pribadi? Cukup laporkan dan tulis rincian laporan!</string>
 
     <string name="slide_3_title">Great Discounts</string>
     <string name="slide_3_desc">Best discounts on every single service we offer!</string>
