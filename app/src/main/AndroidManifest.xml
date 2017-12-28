@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.LoginActivity"
+            android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.WelcomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -25,6 +25,10 @@
         </activity>
         <activity
             android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.MainActivity"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.LoginActivity"
             android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
