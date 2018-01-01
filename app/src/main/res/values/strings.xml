@@ -47,7 +47,7 @@
     <string name="hint_name">Nama Lengkap</string>
     <string name="btn_login">MASUK</string>
     <string name="btn_link_to_register">Bukan anggota? Daftar sekarang juga</string>
-    <string name="btn_link_to_login">Anggota sudah terdaftar sebelumnya</string>
+    <string name="btn_link_to_login">Buka ini bila Anda sudah terdaftar sebelumnya</string>
     <string name="title_activity_reset_password">Reset Password</string>
     <string name="btn_forgot_password">Lupa password?</string>
     <string name="btn_reset_password">Reset Password</string>
