@@ -38,7 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
         txtDetails = (TextView) findViewById(R.id.txt_user);
         inputName = (EditText) findViewById(R.id.name);
         inputEmail = (EditText) findViewById(R.id.email);
-        inputKelas = (EditText) findViewById(R.id.age);
+        inputKelas = (EditText) findViewById(R.id.kelas);
         btnSave = (Button) findViewById(R.id.btn_save);
 
         mFirebaseInstance = FirebaseDatabase.getInstance();
