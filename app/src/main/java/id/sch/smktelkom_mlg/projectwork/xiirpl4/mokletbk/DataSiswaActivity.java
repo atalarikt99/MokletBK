@@ -16,7 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class DataSiswaActivity extends AppCompatActivity {
 
     private Button btnEditProfile, btnChangeEmail, btnChangePassword, btnSendResetEmail, btnRemoveUser,
             changeEmail, changePassword, sendEmail, remove, signOut;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_data_siswa);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(getString(R.string.app_name));
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 if (user == null) {
                     // user auth state is changed - user is null
                     // launch login activity
-                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                    startActivity(new Intent(DataSiswaActivity.this, LoginActivity.class));
                     finish();
                 }
             }
@@ -109,11 +109,11 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(MainActivity.this, "Email address is updated. Please sign in with new email id!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(DataSiswaActivity.this, "Email address is updated. Please sign in with new email id!", Toast.LENGTH_LONG).show();
                                         signOut();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(MainActivity.this, "Failed to update email!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(DataSiswaActivity.this, "Failed to update email!", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
@@ -153,11 +153,11 @@ public class MainActivity extends AppCompatActivity {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if (task.isSuccessful()) {
-                                            Toast.makeText(MainActivity.this, "Password is updated, sign in with new password!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(DataSiswaActivity.this, "Password is updated, sign in with new password!", Toast.LENGTH_SHORT).show();
                                             signOut();
                                             progressBar.setVisibility(View.GONE);
                                         } else {
-                                            Toast.makeText(MainActivity.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(DataSiswaActivity.this, "Failed to update password!", Toast.LENGTH_SHORT).show();
                                             progressBar.setVisibility(View.GONE);
                                         }
                                     }
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
         btnEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, ProfileActivity.class);
+                Intent i = new Intent(DataSiswaActivity.this, ProfileActivity.class);
                 startActivity(i);
             }
         });
@@ -202,10 +202,10 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(MainActivity.this, "Email reset password telah terkirim!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(DataSiswaActivity.this, "Email reset password telah terkirim!", Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(MainActivity.this, "Gagal mengirim email reset password!!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(DataSiswaActivity.this, "Gagal mengirim email reset password!!", Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }
@@ -227,12 +227,12 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(MainActivity.this, "Akun anda telah dihapus, silahkan buat akun baru sekarang!", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(MainActivity.this, SignupActivity.class));
+                                        Toast.makeText(DataSiswaActivity.this, "Akun anda telah dihapus, silahkan buat akun baru sekarang!", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(DataSiswaActivity.this, SignupActivity.class));
                                         finish();
                                         progressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(MainActivity.this, "Gagal menghapus akun!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(DataSiswaActivity.this, "Gagal menghapus akun!", Toast.LENGTH_SHORT).show();
                                         progressBar.setVisibility(View.GONE);
                                     }
                                 }

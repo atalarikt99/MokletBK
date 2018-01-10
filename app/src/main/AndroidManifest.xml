@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.MainActivity"
+            android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.DataSiswaActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
