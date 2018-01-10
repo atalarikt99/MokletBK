@@ -57,10 +57,10 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/age"
+                android:id="@+id/kelas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/age"
+                android:hint="@string/kelas"
                 android:inputType="number"
                 android:maxLines="1" />
 

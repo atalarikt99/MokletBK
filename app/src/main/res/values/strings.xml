@@ -30,7 +30,7 @@
     <string name="action_save">Simpan Data</string>
 
     <string name="name">Nama</string>
-    <string name="age">Usia</string>
+    <string name="kelas">Kelas</string>
     <string name="change_profile">Ubah profil</string>
     <string name="action_sign_in_short">Masuk</string>
     <string name="email">Email</string>

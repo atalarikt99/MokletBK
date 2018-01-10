@@ -19,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private static final String TAG = ProfileActivity.class.getSimpleName();
     private TextView txtDetails;
-    private EditText inputName, inputEmail, inputAge;
+    private EditText inputName, inputEmail, inputKelas;
     private Button btnSave;
     private DatabaseReference mFirebaseDatabase;
     private FirebaseDatabase mFirebaseInstance;
@@ -38,7 +38,7 @@ public class ProfileActivity extends AppCompatActivity {
         txtDetails = (TextView) findViewById(R.id.txt_user);
         inputName = (EditText) findViewById(R.id.name);
         inputEmail = (EditText) findViewById(R.id.email);
-        inputAge = (EditText) findViewById(R.id.age);
+        inputKelas = (EditText) findViewById(R.id.age);
         btnSave = (Button) findViewById(R.id.btn_save);
 
         mFirebaseInstance = FirebaseDatabase.getInstance();
@@ -74,7 +74,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name = inputName.getText().toString();
                 String email = inputEmail.getText().toString();
-                String age = inputAge.getText().toString();
+                String age = inputKelas.getText().toString();
 
                 // Check for already existed userId
                 if (TextUtils.isEmpty(userId)) {
@@ -100,7 +100,7 @@ public class ProfileActivity extends AppCompatActivity {
     /**
      * Creating new user node under 'users'
      */
-    private void createUser(String name, String email, String age) {
+    private void createUser(String name, String email, String kelas) {
         // TODO
         // In real apps this userId should be fetched
         // by implementing firebase auth
@@ -108,7 +108,7 @@ public class ProfileActivity extends AppCompatActivity {
             userId = mFirebaseDatabase.push().getKey();
         }
 
-        User user = new User(name, email, age);
+        User user = new User(name, email, kelas);
 
         mFirebaseDatabase.child(userId).setValue(user);
 
@@ -127,19 +127,18 @@ public class ProfileActivity extends AppCompatActivity {
 
                 // Check for null
                 if (user == null) {
-                    Log.e(TAG, "Data pengguna kosong!");
+                    Log.e(TAG, "Data pengguna kosong.");
                     return;
                 }
 
-                Log.e(TAG, "Data pengguna diubah!" + user.name + ", " + user.email + ", " + user.age);
+                Log.e(TAG, "Data pengguna diubah." + user.name + ", " + user.email + ", " + user.kelas);
 
-                // Display newly updated name and email
-                txtDetails.setText(user.name + ", " + user.email + ", " + user.age);
+                txtDetails.setText(user.name + ", " + user.email + ", " + user.kelas);
 
                 // clear edit text
                 inputEmail.setText("");
                 inputName.setText("");
-                inputAge.setText("");
+                inputKelas.setText("");
 
                 toggleButton();
             }
