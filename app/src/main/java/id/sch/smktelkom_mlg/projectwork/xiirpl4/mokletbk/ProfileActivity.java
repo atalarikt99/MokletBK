@@ -74,13 +74,13 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name = inputName.getText().toString();
                 String email = inputEmail.getText().toString();
-                String age = inputKelas.getText().toString();
+                String kelas = inputKelas.getText().toString();
 
                 // Check for already existed userId
                 if (TextUtils.isEmpty(userId)) {
-                    createUser(name, email, age);
+                    createUser(name, email, kelas);
                 } else {
-                    updateUser(name, email, age);
+                    updateUser(name, email, kelas);
                 }
             }
         });
@@ -151,7 +151,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
-    private void updateUser(String name, String email, String age) {
+    private void updateUser(String name, String email, String kelas) {
         // updating the user via child nodes
         if (!TextUtils.isEmpty(name))
             mFirebaseDatabase.child(userId).child("name").setValue(name);
@@ -159,7 +159,7 @@ public class ProfileActivity extends AppCompatActivity {
         if (!TextUtils.isEmpty(email))
             mFirebaseDatabase.child(userId).child("email").setValue(email);
 
-        if (!TextUtils.isEmpty(age))
-            mFirebaseDatabase.child(userId).child("age").setValue(age);
+        if (!TextUtils.isEmpty(kelas))
+            mFirebaseDatabase.child(userId).child("kelas").setValue(kelas);
     }
 }
