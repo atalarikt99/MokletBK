@@ -68,6 +68,28 @@
                 android:textColor="@android:color/white"/>
 
         </android.support.design.widget.TextInputLayout>
+        
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_siswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:checked="true"
+                android:text="Siswa"/>
+
+            <RadioButton
+                android:id="@+id/radio_guru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:checked="true"
+                android:text="Guru"/>
+
+        </RadioGroup>
 
         <Button
             android:id="@+id/sign_up_button"
