@@ -24,10 +24,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.DataSiswaActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
             android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.LoginActivity"
             android:label="@string/title_activity_profile"
             android:windowSoftInputMode="adjustResize"
@@ -37,13 +33,6 @@
             android:label="@string/title_activity_login"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
-            android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.ResetPasswordActivity"
-            android:label="@string/title_activity_reset_password"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="id.sch.smktelkom_mlg.projectwork.xiirpl4.mokletbk.ProfileActivity">
-        </activity>
     </application>
 
 </manifest>
